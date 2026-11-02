@@ -1,7 +1,7 @@
 (function(){
 /* ======================= EDIT THESE ======================= */
-var WHATSAPP = '2305XXXXXXX';            // your WhatsApp number: country code + number, digits only
-var WHATSAPP_DISPLAY = '+230 5XXX XXXX'; // how the number shows on the page
+var WHATSAPP = '23057534025';            // your WhatsApp number: country code + number, digits only
+var WHATSAPP_DISPLAY = '+230 5753 4025'; // how the number shows on the page
 var EMAIL = 'buildyourdreamwebsitedotcom@gmail.com';
 var TIERS = [
   {id:'low',  name:'Low',  web:10000, be:15000, days:7,  lvl:1, for:'A clean site to get your business online.',
@@ -21,7 +21,7 @@ var EXTRAS = [ // optional add-ons in the estimator — change or remove freely
 ];
 /* ========================================================== */
 
-var IMG = {conneqt:'assets/img/work/conneqt.webp',niadelta:'assets/img/work/niadelta.webp',kavish:'assets/img/work/kavish.webp'};
+var IMG = {conneqt:'assets/img/work/conneqt.webp',niadelta:'assets/img/work/niadelta.webp',kavish:'assets/img/work/kavish.webp',harshinee:'assets/img/work/harshinee.webp',supersonic:'assets/img/templates/supersonic.webp'};
 var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
 var html=document.documentElement, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(pointer:fine)').matches;
 var G=window.gsap, ST=window.ScrollTrigger, FX=!!(G&&ST&&!reduce);
