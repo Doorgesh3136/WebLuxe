@@ -21,12 +21,15 @@ var EXTRAS = [ // optional add-ons in the estimator — change or remove freely
 ];
 /* ========================================================== */
 
-var IMG = {conneqt:'assets/img/work/conneqt.webp',niadelta:'assets/img/work/niadelta.webp',kavish:'assets/img/work/kavish.webp',harshinee:'assets/img/work/harshinee.webp',supersonic:'assets/img/templates/supersonic.webp'};
+var IMG = {conneqt:'assets/img/work/conneqt.webp',niadelta:'assets/img/work/niadelta.webp',tuition:'assets/img/work/tuition-centre.webp',saree:'assets/img/work/saree-shop.webp',store:'assets/img/templates/electronics-store.webp'};
 var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
 var html=document.documentElement, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(pointer:fine)').matches;
 var G=window.gsap, ST=window.ScrollTrigger, FX=!!(G&&ST&&!reduce);
 if(FX){html.classList.add('fx');G.registerPlugin(ST);ST.config({ignoreMobileResize:true})}
 $('#yr').textContent=new Date().getFullYear();
+/* project images: no right-click save / drag-out (a deterrent, not a lock) */
+(function(){var sel='img,.shot,.win,.hcard__img,.tpl__view,.zoom__frame,.lap,.ph-dev,.svc__img';
+  ['contextmenu','dragstart'].forEach(function(ev){document.addEventListener(ev,function(e){if(e.target.closest&&e.target.closest(sel))e.preventDefault()})})})();
 function fmt(n){return Math.round(n).toLocaleString('en-US')}
 function wa(t){return 'https://wa.me/'+WHATSAPP+(t?'?text='+encodeURIComponent(t):'')}
 $('#waText').textContent=WHATSAPP_DISPLAY;
@@ -138,7 +141,7 @@ $$('#faqList .qa').forEach(function(q){$('button',q).addEventListener('click',fu
 var ba=$('#ba');$('input',ba).addEventListener('input',function(e){ba.style.setProperty('--x',e.target.value+'%')});
 
 /* ---------- hero: stack, rotator, spotlight ---------- */
-var wins=$$('#stackIn .win'),names=['ConneQt','NiaDelta','KavishTuitions'],order=[0,1,2];
+var wins=$$('#stackIn .win'),names=['ConneQt','NiaDelta','Your tuition centre'],order=[0,1,2];
 setInterval(function(){if(cur!=='home'||reduce)return;order.push(order.shift());wins.forEach(function(w,i){w.dataset.pos=order.indexOf(i)});$('#stackName').textContent=names[order[0]]},3800);
 var hero=$('#hero'),stackIn=$('#stackIn');
 if(fine&&!reduce){hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect();hero.style.setProperty('--mx',(e.clientX-r.left)+'px');hero.style.setProperty('--my',(e.clientY-r.top)+'px');

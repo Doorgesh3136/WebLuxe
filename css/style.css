@@ -824,7 +824,7 @@ html:not(.fx) .scn__txt{position:relative;top:0;transform:none}
 .tpl{padding:0 0 var(--sec)}
 .tpl__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.8vw,26px);margin-top:clamp(44px,5vw,70px)}
 .tpl__card{display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:#fbf8f2;box-shadow:0 0 0 1px var(--line2);transition:transform .6s var(--e),box-shadow .6s var(--e)}
-.tpl__card:hover{transform:translateY(-6px);box-shadow:0 0 0 1px var(--line2),0 40px 70px -40px rgba(13,13,11,.45)}
+.tpl__card:not(.tpl__card--cta):hover{transform:translateY(-3px);box-shadow:0 0 0 1px var(--line2),0 40px 70px -40px rgba(13,13,11,.45)}
 .tpl__shot .win__bar{background:#ece6da}.tpl__shot .win__bar span{background:#ddd5c6;color:#6d685e}
 .tpl__view{aspect-ratio:16/10;overflow:hidden;background:#111}
 .tpl__view img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s var(--e)}
@@ -873,3 +873,6 @@ html:not(.fx) .scn__txt{position:relative;top:0;transform:none}
   .stack{height:min(780px,34vw)}
   .hdr__in{height:88px}
 }
+
+/* project screenshots: no drag / selection */
+.shot img,.win img,.hcard__img img,.tpl__view img,.zoom__img,.lap img,.ph-scr img,.svc__img img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
